@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-principal: #EAA9D1;          /* Fundo rosa claro */
+            --bg-card: rgba(224, 182, 209, 0.6); /* Caixa central semi-transparente */
+            --cor-input: #F3EFE0;             /* Cor creme dos inputs */
+            --cor-texto-escuro: #D3529B;      /* Rosa escuro dos labels e link */
+            --cor-texto-claro: #FFFFFF;       /* Texto branco */
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-principal);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Container centralizado do formulário */
+        .card-cadastro {
+            background-color: var(--bg-card);
+            border-radius: 24px;
+            padding: 40px;
+            width: 100%;
+            max-width: 620px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Estilização das Etiquetas (Labels) */
+        .form-label {
+            color: var(--cor-texto-escuro);
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Estilização dos Inputs */
+        .form-control-custom {
+            background-color: var(--cor-input);
+            border: none;
+            border-radius: 10px;
+            padding: 12px 20px;
+            color: #555;
+            font-weight: 500;
+            width: 100%;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.03);
+            transition: all 0.2s ease;
+        }
+
+        .form-control-custom:focus {
+            background-color: var(--cor-input);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(243, 239, 224, 0.6);
+        }
+
+        /* Botão Cadastro */
+        .btn-cadastro {
+            background-color: var(--cor-input);
+            color: var(--cor-texto-escuro);
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            padding: 12px 60px;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-cadastro:hover {
+            background-color: #e5e0cf;
+            transform: scale(1.02);
+        }
+
+        /* Texto de rodapé */
+        .texto-rodape {
+            color: var(--cor-texto-claro);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .link-clique-aqui {
+            color: var(--cor-texto-escuro);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.2s ease;
+        }
+
+        .link-clique-aqui:hover {
+            color: #b03b7e;
+            text-decoration: underline;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 576px) {
+            .card-cadastro {
+                padding: 25px 20px;
+                margin: 15px;
+                border-radius: 16px;
+            }
+            .btn-cadastro {
+                width: 100%;
+                padding: 12px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container d-flex justify-content-center align-items-center">
+        <div class="card-cadastro">
+            <form>
+                
+                <div class="mb-3">
+                    <label for="nome" class="form-label text-uppercase">Nome Completo</label>
+                    <input type="text" id="nome" class="form-control-custom" required autocomplete="name">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label text-uppercase">Email</label>
+                    <input type="email" id="email" class="form-control-custom" required autocomplete="email">
+                </div>
+
+                <div class="mb-3">
+                    <label for="senha" class="form-label text-uppercase">Senha</label>
+                    <input type="password" id="senha" class="form-control-custom" required autocomplete="new-password">
+                </div>
+
+                <div class="mb-4">
+                    <label for="repetir-senha" class="form-label text-uppercase">Repetir Senha</label>
+                    <input type="password" id="repetir-senha" class="form-control-custom" required autocomplete="new-password">
+                </div>
+
+                <div class="text-center mb-4 mt-4">
+                    <button type="submit" class="btn-cadastro text-uppercase">Cadastro</button>
+                </div>
+
+                <div class="text-center mt-3">
+                    <p class="texto-rodape text-uppercase m-0">
+                        Caso já possua uma conta <a href="#" class="link-clique-aqui">Clique Aqui</a>
+                    </p>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

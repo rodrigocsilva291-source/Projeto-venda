@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Jordan 1 Low Shy Pink - Detalhes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-topo: #F3EFE0;            /* Creme da navbar */
+            --bg-principal: #EAA9D1;       /* Fundo rosa claro */
+            --cor-detalhe: #F3EFE0;        /* Cor do seletor de tamanho */
+            --cor-texto-menu: #EAA9D1;     /* Rosa dos links do menu */
+            --cor-texto-preco: #D3529B;    /* Rosa escuro do preço */
+            --cor-texto-titulo: #F3EFE0;   /* Creme do título */
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-principal);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar Customizada */
+        .navbar-custom {
+            background-color: var(--bg-topo);
+            padding: 15px 40px;
+            height: 90px;
+        }
+
+        .logo-cactus {
+            height: 60px;
+            opacity: 0.9;
+        }
+
+        .nav-link-custom {
+            color: var(--cor-texto-menu) !important;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            margin-left: 25px;
+            transition: opacity 0.2s;
+        }
+
+        .nav-link-custom:hover {
+            opacity: 0.7;
+        }
+
+        /* Área do Produto */
+        .container-produto {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .imagem-produto {
+            max-width: 100%;
+            height: auto;
+            max-height: 350px;
+            margin-bottom: 30px;
+        }
+
+        .titulo-produto {
+            color: var(--cor-texto-titulo);
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+        }
+
+        .preco-produto {
+            color: var(--cor-texto-preco);
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 35px;
+        }
+
+        /* Caixa de Seleção Customizada */
+        .select-container {
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+        }
+
+        .select-custom {
+            background-color: var(--cor-detalhe);
+            color: var(--cor-texto-preco);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 1.5px;
+            border: none;
+            border-radius: 0px; /* Quadrado conforme a imagem */
+            padding: 12px 20px;
+            width: 100%;
+            text-align: center;
+            text-align-last: center; /* Centraliza o texto selecionado no Chrome/Firefox */
+            appearance: none; /* Remove a seta padrão do sistema */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+        }
+
+        .select-custom:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(243, 239, 224, 0.4);
+        }
+
+        /* Ícone de Seta Customizado (CSS puro para imitar o da imagem) */
+        .select-container::after {
+            content: "";
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-30%) rotate(45deg);
+            width: 12px;
+            height: 12px;
+            border-right: 2px solid var(--cor-texto-preco);
+            border-bottom: 2px solid var(--cor-texto-preco);
+            pointer-events: none; /* Garante que o clique passe para o select */
+        }
+
+        /* Ajustes de Responsividade */
+        @media (max-width: 576px) {
+            .navbar-custom {
+                padding: 15px 20px;
+                height: auto;
+            }
+            .nav-link-custom {
+                margin-left: 15px;
+                font-size: 0.85rem;
+            }
+            .titulo-produto {
+                font-size: 1.1rem;
+            }
+            .preco-produto {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand navbar-light navbar-custom">
+        <div class="container-fluid p-0 align-items-center">
+            <a class="navbar-brand m-0" href="#">
+                <img src="https://placehold.co/60x60/F3EFE0/000000?text=CACTUS+JACK" alt="Cactus Jack Logo" class="logo-cactus">
+            </a>
+            
+            <div class="navbar-nav ms-auto text-uppercase">
+                <a class="nav-link nav-link-custom" href="#">Página Inicial</a>
+                <a class="nav-link nav-link-custom" href="#">Usuário</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container-produto">
+        
+        <img src="../SHY_PINK_2025-removebg-preview 1.png" alt="">
+        <h1 class="titulo-produto text-uppercase">Air Jordan 1 Low Shy Pink</h1>
+        <h2 class="preco-produto text-uppercase">R$1.299,99</h2>
+        
+        <div class="select-container">
+            <select class="select-custom text-uppercase">
+                <option value="" disabled selected>Selecione seu tamanho</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+            </select>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
